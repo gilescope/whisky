@@ -23,7 +23,7 @@ whisky-common = { version = "1.0.16", path = "../whisky-common" }
 
 # non-wasm
 [target.'cfg(not(all(target_arch = "wasm32", not(target_os = "emscripten"))))'.dependencies]
-uplc = "1.1.10"
+uplc = "1.1.9"
 wasm-bindgen = { version = "0.2.100", features = ["serde-serialize"] }
 rand_os = "0.1"
 noop_proc_macro = "0.3.0"
@@ -36,7 +36,7 @@ cquisitor-lib = { git = "https://github.com/rsporny/cquisitor-lib", branch = "wa
 # wasm
 [target.'cfg(all(target_arch = "wasm32", not(target_os = "emscripten")))'.dependencies]
 serde-wasm-bindgen = "0.4.5"
-uplc = "1.1.10"
+uplc = "1.1.9"
 wasm-bindgen = { version = "0.2.100", features = ["serde-serialize"] }
 rand_os = { version = "0.1", features = ["wasm-bindgen"] }
 js-sys = "0.3.69"
