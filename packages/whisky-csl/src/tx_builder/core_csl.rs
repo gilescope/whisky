@@ -718,7 +718,7 @@ impl CoreCSL {
 
     pub fn add_invalid_before(&mut self, invalid_before: u64) -> Result<(), WError> {
         self.tx_builder
-            .set_validity_start_interval_bignum(to_bignum(invalid_before).map_err(
+            .set_validity_start_interval_bignum(&to_bignum(invalid_before).map_err(
                 WError::from_err("CoreCSL - add_invalid_before - invalid invalid_before"),
             )?);
         Ok(())

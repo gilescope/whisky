@@ -575,9 +575,8 @@ dependencies = [
 
 [[package]]
 name = "cardano-serialization-lib"
-version = "15.0.0-beta.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dce90222c3b28f994732b0dc2405e21ae0ec509efb074298fd81267c0176ebf9"
+version = "15.0.1"
+source = "git+https://github.com/ozgb/cardano-serialization-lib?tag=15.0.1-wasm-bindgen-0.2.101#36125fd2e87d4f5e14f46ab607355c814ce6fef0"
 dependencies = [
  "bech32 0.7.3",
  "cbor_event",
@@ -749,8 +748,7 @@ dependencies = [
 [[package]]
 name = "cquisitor-lib"
 version = "0.1.0-beta.25"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c5d67624775b7d97c81ad5aefed9eebbb6684551a6efb35323b6e113ad0de504"
+source = "git+https://github.com/rsporny/cquisitor-lib?branch=wasm-bindgen-update#03ae340c902ccfb153b4daaad07e30bc20fd7474"
 dependencies = [
  "anyhow",
  "bech32 0.11.0",
@@ -3648,25 +3646,27 @@ checksum = "9c8d87e72b64a3b4db28d11ce29237c246188f4f51057d65a7eab63b7987e423"
 
 [[package]]
 name = "wasm-bindgen"
-version = "0.2.92"
+version = "0.2.101"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4be2531df63900aeb2bca0daaaddec08491ee64ceecbee5076636a3b026795a8"
+checksum = "7e14915cadd45b529bb8d1f343c4ed0ac1de926144b746e2710f9cd05df6603b"
 dependencies = [
  "cfg-if",
+ "once_cell",
+ "rustversion",
  "serde",
  "serde_json",
  "wasm-bindgen-macro",
+ "wasm-bindgen-shared",
 ]
 
 [[package]]
 name = "wasm-bindgen-backend"
-version = "0.2.92"
+version = "0.2.101"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "614d787b966d3989fa7bb98a654e369c762374fd3213d212cfc0251257e747da"
+checksum = "e28d1ba982ca7923fd01448d5c30c6864d0a14109560296a162f80f305fb93bb"
 dependencies = [
  "bumpalo",
  "log",
- "once_cell",
  "proc-macro2",
  "quote",
  "syn 2.0.90",
@@ -3687,9 +3687,9 @@ dependencies = [
 
 [[package]]
 name = "wasm-bindgen-macro"
-version = "0.2.92"
+version = "0.2.101"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a1f8823de937b71b9460c0c34e25f3da88250760bec0ebac694b49997550d726"
+checksum = "7c3d463ae3eff775b0c45df9da45d68837702ac35af998361e2c84e7c5ec1b0d"
 dependencies = [
  "quote",
  "wasm-bindgen-macro-support",
@@ -3697,9 +3697,9 @@ dependencies = [
 
 [[package]]
 name = "wasm-bindgen-macro-support"
-version = "0.2.92"
+version = "0.2.101"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e94f17b526d0a461a191c78ea52bbce64071ed5c04c9ffe424dcb38f74171bb7"
+checksum = "7bb4ce89b08211f923caf51d527662b75bdc9c9c7aab40f86dcb9fb85ac552aa"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -3710,9 +3710,12 @@ dependencies = [
 
 [[package]]
 name = "wasm-bindgen-shared"
-version = "0.2.92"
+version = "0.2.101"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "af190c94f2773fdb3729c55b007a722abb5384da03bc0986df4c289bf5567e96"
+checksum = "f143854a3b13752c6950862c906306adb27c7e839f7414cec8fea35beab624c1"
+dependencies = [
+ "unicode-ident",
+]
 
 [[package]]
 name = "web-sys"
