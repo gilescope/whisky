@@ -44,7 +44,7 @@ pub fn eval_phase_two(
                 );
 
                 match eval_result {
-                    Ok(redeemer) => results.push(PhaseTwoEvalResult::Success(redeemer)),
+                    Ok((redeemer, _eval_result)) => results.push(PhaseTwoEvalResult::Success(redeemer)),
                     Err(error) => results.push(PhaseTwoEvalResult::Error(redeemer, error)),
                 }
             }

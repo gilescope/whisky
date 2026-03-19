@@ -96,7 +96,7 @@ pub fn map_error_to_eval_error(err: UplcError, original_redeemer: Redeemer) -> E
             },
             tag: map_redeemer_tag(&original_redeemer.tag),
             error_message: format!("{}", err),
-            logs,
+            logs: logs.iter().map(|t| t.to_string()).collect(),
         },
         UplcError::RedeemerError { err, .. } => match *err {
             UplcError::Machine(err, budget, logs) => EvalError {
@@ -107,7 +107,7 @@ pub fn map_error_to_eval_error(err: UplcError, original_redeemer: Redeemer) -> E
                 },
                 tag: map_redeemer_tag(&original_redeemer.tag),
                 error_message: format!("{}", err),
-                logs,
+                logs: logs.iter().map(|t| t.to_string()).collect(),
             },
             _ => EvalError {
                 index: original_redeemer.index,
