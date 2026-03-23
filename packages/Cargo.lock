@@ -540,7 +540,8 @@ dependencies = [
 [[package]]
 name = "cardano-serialization-lib"
 version = "15.0.3"
-source = "git+https://github.com/Emurgo/cardano-serialization-lib?tag=15.0.3#df8cf0805cbeae180b2cf96d4743114cf947c3d3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5a04eff5f3b018916c552ddd08fdc7858a7d38b08fbd11ca42136da74f275b3a"
 dependencies = [
  "bech32 0.7.3",
  "cbor_event",
@@ -725,7 +726,7 @@ dependencies = [
 [[package]]
 name = "cquisitor-lib"
 version = "0.1.0-beta.25"
-source = "git+https://github.com/gilescope/cquisitor-lib?branch=wasm-bindgen-update#3153e7fe6e440b65f5557bcae8d74c853e4ab319"
+source = "git+https://github.com/gilescope/cquisitor-lib?branch=wasm-bindgen-update#4f7cd73fd75909bc9cd2c3de9dd04624be17ae35"
 dependencies = [
  "anyhow",
  "bech32 0.11.1",
